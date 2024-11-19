@@ -8,7 +8,16 @@ from .forms import CollaborateForm
 
 def about_me(request):
     """
-    Renders the About page
+    Renders the most recent information on the website author
+    and allows user collaboration request
+    Displays an individual instanc eof :model:`about.About`.
+    **Context**
+    ``about``
+        The most recent instance of :model:`about.About`.
+    ``collaborate_form``
+        An instance of :form:`about.CollaborateForm`.
+    **Template:**
+    :template:`about/about.html`
     """
     if request.method == "POST":
         print("received a POST request")
